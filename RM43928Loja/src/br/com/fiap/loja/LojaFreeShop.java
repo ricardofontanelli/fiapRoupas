@@ -9,17 +9,23 @@ public class LojaFreeShop {
 	 */
 	public static void main(String[] args) {
 	
-		MoedaEstrangeira converter = new MoedaEstrangeira();
+		MoedaEstrangeiraProxy converter = new MoedaEstrangeiraProxy();
 				
 		System.out.println("Digite o valor em Dólar:");
 		
-		Scanner teclado = new Scanner(System.in); 
+		try{
+			Scanner teclado = new Scanner(System.in); 
+			
+			int valorDolar = teclado.nextInt();
+			
+			int valorReal = converter.converterDolar(valorDolar);
+			
+			System.out.println("Valor em real: " + valorReal);
+		}
+		catch(Exception e){
+			System.out.println("Erro tente mais tarde!");
+		}
 		
-		int valorDolar = teclado.nextInt();
-		
-		int valorReal = converter.converterDolar(valorDolar);
-		
-		System.out.println("Valor em real: " + valorReal);
 
 	}	
 
