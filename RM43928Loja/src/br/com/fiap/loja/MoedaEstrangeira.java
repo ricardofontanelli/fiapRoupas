@@ -13,7 +13,7 @@ public class MoedaEstrangeira {
 	/**
 	 * Converter dolar.
 	 *
-	 * @param valor valor em dolar
+	 * @param valor valor em dolar 
 	 * @return the int valor em real
 	 */
 	public int converterDolar(int valor){
